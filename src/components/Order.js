@@ -25,9 +25,6 @@ const childVariant = {
 }
 const Order = ({ pizza }) => {
 
-  const [hide, setHide] = useState(false);
-
-  setTimeout(() => setHide(true), 4000)
 
   return (
     <motion.div
@@ -35,15 +32,9 @@ const Order = ({ pizza }) => {
       initial='hidden'
       animate="visible"
       className="container order">
-      <AnimatePresence>
-        {!hide &&
-          (<motion.h2
-            exit={{
-              y: -1000
-            }}
-          >{'Thank you for your order :)'}</motion.h2>)
-        }
-      </AnimatePresence>
+      <h2>
+        {'Thank you for your order :)'}
+      </h2>
 
       <motion.p
         variants={childVariant}

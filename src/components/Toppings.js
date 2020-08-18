@@ -12,6 +12,12 @@ const containerVariants = {
     opacity: 1,
     transition: { type: 'spring', delay: .5 }
   },
+  exit: {
+    x: '-100vw',
+    transition: {
+      ease: 'easeInOut'
+    }
+  }
 }
 
 const Toppings = ({ addTopping, pizza }) => {
@@ -22,6 +28,7 @@ const Toppings = ({ addTopping, pizza }) => {
       variants={containerVariants}
       initial='hidden'
       animate="visible"
+      exit='exit'
       className="toppings container">
 
       <h3>Step 2: Choose Toppings</h3>
