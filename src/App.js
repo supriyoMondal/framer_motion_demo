@@ -35,7 +35,8 @@ function App() {
       <AnimatePresence exitBeforeEnter
         onExitComplete={() => setModal(false)}
       >
-        <Switch location={location} key={location.key}>
+        <Switch
+          location={location} key={location.key}>
           <Route path="/base" exact>
             <Base addBase={addBase} pizza={pizza} />
           </Route>
